@@ -1,7 +1,7 @@
 koloda = [6,7,8,9,10,2,3,4,11] * 4
 import random
 random.shuffle(koloda)
-print('Пограємо в очко?')
+print('Пограємо в очко!')
 bill = 0
 true= 3
 
@@ -13,19 +13,22 @@ while true == 3:
         bill += account
         if bill > 21:
             print('Вибачте, Ви програли')
-            break
+            true = 4
         elif bill == 21:
             print('Вітаємо з перемогою!')
-            break
+            true = 4
         else:
             print(' У Вас %d очків' %bill)
-            break
+            true = 3
     else:
         print('Ну як хочете')
         break
-
-exit = input("Ви хочете продовжити? так/ні\n ")
-if exit == 'ні':
-	    print('До зустрічі !')
-if exit == 'так':
-        true == 3
+    while true == 4:
+        exit = input("Ви хочете продовжити? так/ні\n ")
+        if exit == 'так':
+            true = 3
+            bill = 0
+            break
+        elif exit == 'ні':
+        	    print('До зустрічі !')
+        	    break
