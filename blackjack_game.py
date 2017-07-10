@@ -57,11 +57,12 @@ class Table():
 #f = myDeck.pop()
 #print(myDeck.cardName(f))
 #print(myDeck.cardValue(f))
-ready = True
-bill = 0
-billdealer = 0
+if __name__ == '__main__':
+    ready = True
+    bill = 0
+    billdealer = 0
 
-while ready:
+    while ready:
     myDeck = Deck()
     myDeck.toss()
     print('You are player')
